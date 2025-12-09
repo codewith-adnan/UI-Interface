@@ -28,7 +28,6 @@ const Faq = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row gap-12">
 
-                    {/* Content Column */}
                     <div className="lg:w-7/12 order-2 lg:order-1 flex flex-col justify-center">
                         <div className="mb-12 px-4 lg:px-12" data-aos="fade-up" data-aos-delay="100">
                             <h3 className="text-2xl font-bold text-[#010483] mb-2 font-heading">
