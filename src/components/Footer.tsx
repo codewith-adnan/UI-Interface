@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <footer className="dark-background text-sm mt-auto">
+    <footer className="bg-[#08005e] text-sm mt-auto">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
+
           <div>
             <a href="index.html" className="flex items-center mb-6">
               <span className="text-2xl font-bold tracking-wider font-heading text-heading">Bootslander</span>

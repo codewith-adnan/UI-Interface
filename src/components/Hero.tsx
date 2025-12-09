@@ -8,13 +8,13 @@ const Hero = () => {
       <img src={HeroBg} alt="" className="absolute inset-0 w-full h-full object-cover z-[1]" />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-#08005e bg-background/10 z-[2]"></div>
+      <div className="absolute inset-0 bg-[#08005e]/95 z-[2]"></div>
 
       <div className="container mx-auto px-4 relative z-[3]">
         <div className="flex flex-col lg:flex-row justify-between gap-10">
 
           {/* Image Side (Order Last on Desktop per template) */}
-          <div className="lg:w-5/12 lg:order-last flex justify-center" data-aos="zoom-out">
+          <div className="lg:w-3/12 lg:order-last flex justify-center" data-aos="zoom-out">
             <img src={HeroImg} className="max-w-full h-auto animate-up-down" alt="" />
           </div>
 
