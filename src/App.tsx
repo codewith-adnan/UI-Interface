@@ -14,6 +14,7 @@ import Gallery from './components/Gallery';
 import Testimonials from './components/Testominals';
 import Team from './components/Team';
 import Pricing from './components/Pricing';
+import Faq from './components/Faq';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 
@@ -41,6 +42,7 @@ function App() {
         <Testimonials />
         <Team />
         <Pricing />
+        <Faq />
         <Contact />
         {/* FAQ and Contact components go here */}
       </main>
