@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define CSS Variables */
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  /* Global Colors */
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #040677;
+  --accent-color: #1acc8d;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+
+  /* Nav Colors */
+  --nav-color: #ffffff;
+  --nav-hover-color: #1acc8d;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #444444;
+  --nav-dropdown-hover-color: #1acc8d;
+}
+
+/* Color Presets */
+.light-background {
+  --background-color: #f4f5fe;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #08005e;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #0c0091;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-default bg-background font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-heading font-heading;
+}
+
+a {
+  @apply text-accent no-underline transition-all duration-300;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+/* Animations */
+@keyframes up-down {
+  0% { transform: translateY(10px); }
+  100% { transform: translateY(-10px); }
+}
+.animate-up-down {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes move-forever {
+  0% { transform: translate(85px, 0%); }
+  100% { transform: translate(-90px, 0%); }
+}
+.wave-animate {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
