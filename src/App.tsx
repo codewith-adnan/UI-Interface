@@ -12,6 +12,7 @@ import Stats from './components/Stats';
 import Details from './components/Details';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testominals';
+import Team from './components/Team';
 import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
@@ -38,7 +39,7 @@ function App() {
         <Details />
         <Gallery />
         <Testimonials />
-        {/* Team Component goes here */}
+        <Team />
         <Pricing />
         <Contact />
         {/* FAQ and Contact components go here */}

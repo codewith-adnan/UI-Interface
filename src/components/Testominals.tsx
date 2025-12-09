@@ -51,7 +51,7 @@ const Testimonials = () => {
     <section id="testimonials" className="py-20 relative dark-background">
       {/* Background Image Overlay */}
       <img src={TestimonialsBg} className="absolute inset-0 w-full h-full object-cover z-[1]" alt="" />
-      <div className="absolute inset-0 bg-background/70 z-[2] bg-[#000000]/70"></div>
+      <div className="absolute inset-0 z-[2] bg-[#0b0446]/70"></div>
 
       <div className="container mx-auto px-4 relative z-[3]" data-aos="fade-up">
         <Swiper
@@ -60,7 +60,7 @@ const Testimonials = () => {
           speed={600}
           loop={true}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
-          slidesPerView="auto"
+          slidesPerView={1}
           pagination={{
             clickable: true,
             el: '.swiper-pagination',
@@ -68,7 +68,7 @@ const Testimonials = () => {
           }}
           breakpoints={{
             320: { slidesPerView: 1 },
-            1200: { slidesPerView: 3 },
+            1200: { slidesPerView: 1 },
           }}
           className="pb-10"
         >

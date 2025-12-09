@@ -7,10 +7,14 @@ const Details = () => {
     return (
         <section id="details" className="py-16">
             {/* Section Title */}
-            <div className="container mx-auto px-4 mb-12 text-center" data-aos="fade-up">
-                <h2 className="text-3xl font-bold mb-2 text-heading">Details</h2>
-                <div className="text-sm text-gray-500 font-semibold uppercase tracking-wider">
-                    <span>Check Our</span> <span className="text-accent">Details</span>
+            <div className="container mx-auto px-4 mb-12" data-aos="fade-up">
+                <div className="text-center sm:text-left">
+                    <h2 className="text-sm font-medium tracking-[1.5px] uppercase text-default/50 relative inline-block after:content-[''] after:w-[120px] after:h-[1px] after:bg-accent after:inline-block after:ml-2.5 after:mb-1">
+                        Details
+                    </h2>
+                    <div className="font-heading text-3xl font-bold text-heading uppercase mt-1">
+                        <span className="text-default">Check Our</span> <span className="text-accent">Details</span>
+                    </div>
                 </div>
             </div>
 
