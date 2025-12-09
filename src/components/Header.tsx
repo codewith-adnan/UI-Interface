@@ -18,10 +18,8 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Handle Navbar Background
       setIsScrolled(window.scrollY > 50);
 
-      // Handle Active Section
       const scrollPosition = window.scrollY + 100; // Offset for fixed header
 
       for (const link of navLinks) {
@@ -53,7 +51,6 @@ const Header = () => {
           <h1 className="text-3xl font-bold text-white font-heading">Bootslander</h1>
         </a>
 
-        {/* Desktop Nav */}
         <nav className="hidden xl:flex items-center gap-8">
           <ul className="flex gap-8 text-white/80 font-nav text-[15px]">
             {navLinks.map((link) => (
