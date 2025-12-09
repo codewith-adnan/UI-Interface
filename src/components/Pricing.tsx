@@ -60,7 +60,7 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative p-10 rounded-2xl h-full ${plan.featured ? 'shadow-xl z-10 scale-105 bg-white border-2 border-accent' : 'bg-[#f6fdfb] z-0'}`}
+              className={`relative p-10 rounded-2xl h-full ${plan.featured ? 'shadow-xl z-10 scale-105   border-2 border-accent bg-[#f6fdfb] z-0' : 'bg-[#f6fdfb] z-0'}`}
               data-aos="zoom-in"
               data-aos-delay={(index + 1) * 100}
             >
