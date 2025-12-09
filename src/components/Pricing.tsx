@@ -58,33 +58,33 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`relative p-10 rounded-2xl h-full ${plan.featured ? 'shadow-xl z-10 scale-105 bg-white border-2 border-accent' : 'bg-accent/5 z-0'}`} 
-              data-aos="zoom-in" 
+            <div
+              key={index}
+              className={`relative p-10 rounded-2xl h-full ${plan.featured ? 'shadow-xl z-10 scale-105 bg-white border-2 border-accent' : 'bg-[#f6fdfb] z-0'}`}
+              data-aos="zoom-in"
               data-aos-delay={(index + 1) * 100}
             >
               {plan.featured && (
                 <span className="absolute top-4 right-4 bg-accent text-white text-sm font-medium px-4 py-1 rounded-md">Popular</span>
               )}
-              
+
               <h3 className="font-semibold text-xl mb-4">{plan.name}</h3>
               <h4 className="text-accent text-5xl font-bold font-heading mb-0">
                 <sup className="text-3xl">$</sup>{plan.price}<span className="text-default/50 text-lg font-medium"> / month</span>
               </h4>
-              
+
               <div className="mt-6 mb-2 text-center">
-                 <a href="#" className={`inline-block px-9 py-2.5 rounded-md font-heading font-medium transition-all border border-default text-default hover:bg-accent hover:text-white hover:border-accent ${plan.featured ? 'bg-accent text-white border-accent' : ''}`}>
-                   Start a free trial
-                 </a>
+                <a href="#" className={`inline-block px-9 py-2.5 rounded-md font-heading font-medium transition-all border border-default text-default hover:bg-accent hover:text-white hover:border-accent ${plan.featured ? 'bg-accent text-white border-accent' : ''}`}>
+                  Start a free trial
+                </a>
               </div>
               <p className="text-center text-xs mb-6">No credit card required</p>
 
               <ul className="space-y-3 text-default/70 text-sm">
                 {plan.features.map((feature, fIndex) => (
                   <li key={fIndex} className={`flex items-center ${!feature.active ? 'text-default/40 line-through decoration-default/40' : ''}`}>
-                    {feature.active ? 
-                      <i className="bi bi-check text-[#059652] text-xl mr-2"></i> : 
+                    {feature.active ?
+                      <i className="bi bi-check text-[#059652] text-xl mr-2"></i> :
                       <i className="bi bi-x text-default/40 text-xl mr-2"></i>
                     }
                     <span>{feature.name}</span>

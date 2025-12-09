@@ -24,15 +24,15 @@ const Faq = () => {
     };
 
     return (
-        <section id="faq" className="py-16 bg-background">
+        <section id="faq" className="py-16 bg-[#f4f5fe]">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row gap-12">
 
                     {/* Content Column */}
                     <div className="lg:w-7/12 order-2 lg:order-1 flex flex-col justify-center">
                         <div className="mb-12 px-4 lg:px-12" data-aos="fade-up" data-aos-delay="100">
-                            <h3 className="text-2xl font-bold text-heading mb-2">
-                                <span className="text-default font-normal">Frequently Asked </span>
+                            <h3 className="text-2xl font-bold text-[#010483] mb-2 font-heading">
+                                <span className="text-[#010483] font-normal">Frequently Asked </span>
                                 <strong>Questions</strong>
                             </h3>
                             <p className="text-default">
@@ -44,13 +44,15 @@ const Faq = () => {
                             {faqs.map((faq, index) => (
                                 <div
                                     key={index}
-                                    className={`bg-white p-6 rounded relative cursor-pointer transition-all duration-300 hover:bg-[#fbfbfb] shadow-sm ${activeIndex === index ? 'shadow-md bg-[#fbfbfb]' : ''}`}
+                                    className={`bg-white p-5 rounded relative cursor-pointer transition-all duration-300 hover:text-accent ${activeIndex === index ? 'shadow-md text-accent' : 'shadow-sm text-[#010483]'}`}
                                     onClick={() => toggleFaq(index)}
                                 >
                                     <div className="flex items-start gap-4">
-                                        <i className="bi bi-question-circle text-accent text-xl mt-1 shrink-0"></i>
+                                        <div className="mt-[2px] shrink-0">
+                                            <i className={`bi bi-question-circle text-xl ${activeIndex === index ? 'text-accent' : 'text-[#1acc8d]'}`}></i>
+                                        </div>
                                         <div className="flex-1">
-                                            <h3 className="text-lg font-bold text-heading hover:text-accent transition-colors duration-300">
+                                            <h3 className={`text-lg font-medium transition-colors duration-300 ${activeIndex === index ? 'text-accent' : 'text-[#010483] hover:text-accent'}`}>
                                                 {faq.question}
                                             </h3>
                                             <div
@@ -62,7 +64,7 @@ const Faq = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <i className={`bi bi-chevron-right text-heading transition-transform duration-300 shrink-0 ${activeIndex === index ? 'rotate-90' : ''}`}></i>
+                                        <i className={`bi bi-chevron-${activeIndex === index ? 'down' : 'right'} transition-transform duration-300 shrink-0 ${activeIndex === index ? 'text-accent' : 'text-default'}`}></i>
                                     </div>
                                 </div>
                             ))}
